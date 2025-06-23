@@ -1,0 +1,36 @@
+--------------------- SPRING BOOT SETUP ----------
+
+1. Install Java JDK.
+
+2. install Eclipse WEb developers IDE for vs code install spring boot extension pack.
+
+3. got to start.spring.io and select maven and java. select artifact,name,package as jar and latest java.
+   artifact means when we take build that name is artifact.
+   add spring web depedency.
+
+4. maven nd gradle are the depedency managers in java.
+
+5. download and extract folder. you will see pom.xml it help to create an spring project
+
+6. create maven project an import existing project select pom.xml. it has all depedency for spring.
+
+7. if you face version not found error, go to window --> preferences --> java --> installer jre 
+   --> add jre --> program files --> java --> jdk-version 
+
+8. jre system [your selected verison of jdk] --> works fine
+
+--------------------------- PROJECT STRUCTURE -----------
+
+1. src/main/java --> here we write our application code logic
+
+2. src/main/resources --> as application config files
+
+3. pom.xml --> has depedency information and build information.
+
+4. src/main/java/projectName.java --> is a entry point for spring project
+
+5. run java file --> tomcat server started at port 8080. iff see whitelable error it works!.
+
+6. install spring-boot-devtool for auto compile your spring project. 
+
+

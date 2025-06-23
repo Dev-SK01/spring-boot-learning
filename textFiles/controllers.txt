@@ -1,0 +1,16 @@
+--------------------- SPRING CONTROLLERS -----------
+
+1. Controllers handles the client request and response.
+
+2. create package for controller it more convenient.
+
+3. use @RestController in your controller. it has two annotation controller and responsebody.
+
+4. controller used to control te request.responsebody handles response data format.
+
+5. @RequestMapping("endpoint"); --> request mapped for that controller.
+
+6. @GetMapping; --> when get method request that method will called.
+
+7. Recompile and run the program.
+

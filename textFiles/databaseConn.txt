@@ -1,0 +1,13 @@
+-------------------------- DATABASE CONNECTION -------
+
+1. install spring-boot-starter-dat-jpa
+
+2. search database application.properties configurations
+
+3. paste it in src/java/resources/application.properties
+
+4. edit your database connection values.
+
+5. install database connector for your database jdbc.
+
+6. restart your application
