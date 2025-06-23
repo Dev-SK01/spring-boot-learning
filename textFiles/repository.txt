@@ -1,0 +1,32 @@
+--------------------------- SPRING REPOSITORY ------------
+
+1. REPOSITORY is an interface . it works between controller and entity.
+
+2. using REPOSITORY do CRUD ops easily, it gives us find()save(),delete()
+
+3. easy to maintain and write code.
+
+4. create interface for oyur REPOSITORY and extends JpaRepository<Entity,Entity Id Type>
+
+5. @AutoWired --> creats an automatic class object. called component scanning
+
+6. import and define your REPOSITORY in controller.
+
+-------------------- Methods -----------------
+1. findAll() --> retrives all data form the database.
+
+2. save(entity data) --> insert data into database
+
+3. findById(id) --> find data by id
+
+4. orElseThrow(() -> new exception class(args)) --> runs when no data found.
+
+------------------ Request Error Handling ----------
+
+1. creat exception class extends RuntimException
+
+2. create constructor and pass into super(arg);
+
+3. use @ResponseStatus in exception class
+
+4. use class on controller repo.orElseThrow(lamda function)

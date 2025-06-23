@@ -1,0 +1,15 @@
+--------------------- IOC CREATION IN XML ----------
+
+1. Intall Spring context using maven.
+
+2. ApplicationContext context = new ClassPathXmlApplicaionContext("xml config path"); --> creates container.
+
+3. create file in main/resources/xml file;
+
+4. DI is call as bean beans are the object for IOC containter or bean factory. define beans schema
+
+5. configure you xml file in <beans><bean id="your id" class="org.example.className"></bean></beans>
+
+--------------------- Setter Injection -------------------
+
+1.

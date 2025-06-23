@@ -14,3 +14,18 @@
 
 7. Recompile and run the program.
 
+--------------------------- ANNOTATIONS ------------
+
+1. @PostMapping --> handles post request
+
+2. @GetMapping --> handles get request & @GetMapping("/{url params}") 
+
+3. @RequestBody Type variable --> to get the request data.
+
+4. @PathVariable Type url param --> to get an url param in get request
+
+5. @ResponseStatus(value=HtttpStatus.NOTFOUND) --> send the http response status.
+
+6. @PutMapping("/{path param}") --> handles update request.
+
+7. @DeleteMapping("/{path parm}") --> handles delete request.

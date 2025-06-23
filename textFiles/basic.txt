@@ -1,0 +1,32 @@
+------------------------------- SPRING BOOT BASIC --------------
+
+1. spring boots is an extended version o the spring.
+
+2. it is loosely coupled , Depedency injection. inversion of control.
+
+3. Depedency injjection means we dont need to create object spring wil create.
+
+4. spring is used to develope entriprise application.
+
+5. spring boot follows convension over configuration means less configs compared to spring
+
+6. spring boot has embeded server tomcat.
+
+7. Hybernate provides JPA for database connection
+
+8. Controller --> Entity Layer --> Repo --> DB
+
+------------------------ DEPEDENCY INJECTION ---------------
+
+1. creating the class object automatically.
+
+2. when we create an object it created on jvm heap memory. but if we create it in spring that will be 
+   created in IOC container in IVM that will provide loosely coupling and DI. 
+   that is call Application Context
+
+3. there ara threee types of injection
+   1. Field injection --> 
+   2. constructor injection -->
+   3. Setter Injection -->
+
+

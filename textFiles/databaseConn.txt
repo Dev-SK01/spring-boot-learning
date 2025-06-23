@@ -1,6 +1,6 @@
 -------------------------- DATABASE CONNECTION -------
 
-1. install spring-boot-starter-dat-jpa
+1. install spring-boot-starter-data-jpa
 
 2. search database application.properties configurations
 
@@ -11,3 +11,21 @@
 5. install database connector for your database jdbc.
 
 6. restart your application
+
+--------------- CREATING ENTITY -----------
+
+1. Entity is an normal java class that connected to the table rows. we can do db operation using entity.
+
+2. Simply entity is blue print for how the data are created in db.
+
+3. entity communicatates bw database table and class object.
+
+4. @Entity is use to change an normal class to entity class.
+
+5. @Table(name="table-name") --> creates an table in that name
+
+6. @Id --> creates an primary id for the table
+
+7. @GenrateValue(strategy=GenerationType.IDENTITY) --> auto increaments the primary key value
+
+8. generate default and field constructor nd getters and setters , and db schema.

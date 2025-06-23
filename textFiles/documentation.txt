@@ -1,0 +1,6 @@
+------------------------------- SWAGGER DOCUMENTATION ---------------
+
+1. install springdoc openapi starter 
+
+2. goto localhost:8080/swagger-ui/index.html
+
