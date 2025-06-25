@@ -1,0 +1,7 @@
+-------------------------- SPRING DATA JPA -----------
+
+1. Java uses JDBC for database conection there are seven to to get the data from db.
+
+2. ORM(hibernate) --> Ojbect Relational Mapping , maps our class object to database table field and values.
+
+3. JPA --> Java Presistence API

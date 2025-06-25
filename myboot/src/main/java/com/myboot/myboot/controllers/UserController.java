@@ -1,8 +1,6 @@
 package com.myboot.myboot.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.myboot.myboot.entity.UserEntity;
@@ -14,6 +12,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +21,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @RequestMapping("api/user")
@@ -77,4 +79,18 @@ public class UserController {
          userRepo.delete(userData);
          return ResponseEntity.ok().build();
     }
+
+    // custom mehthod by property
+    @GetMapping("/age/{age}")
+    public UserEntity[] getUserByAge(@PathVariable int age){
+        return userRepo.findAllByAge(age);
+    }
+
+    // custom sql query
+    @PostMapping("/filter")
+    public ResponseEntity<UserEntity[]> getByNameAndAge(@Param("name") String name , @Param("age") int age){
+        return new ResponseEntity<>(userRepo.findByNameAndAge(name,age),HttpStatus.OK);
+    }
+    
+    
 }

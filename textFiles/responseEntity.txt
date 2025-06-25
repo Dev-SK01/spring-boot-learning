@@ -1,0 +1,7 @@
+--------------------------------- SPRING RESPONSE ENTITY -------------
+
+1. ResponseEntity is an controller for an sednning the Response
+
+2. new ResponseEntity<Type>(data,http status);
+
+3. in controller method we need to mention the type ResponseEntity<Type>

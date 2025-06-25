@@ -4,12 +4,56 @@
 
 2. ApplicationContext context = new ClassPathXmlApplicaionContext("xml config path"); --> creates container.
 
-3. create file in main/resources/xml file;
+3. create file in main/resources/xml file; define beans schema from internet.
 
-4. DI is call as bean beans are the object for IOC containter or bean factory. define beans schema
+4. DI is called as bean, beans are the object for IOC containter or bean factory. 
 
 5. configure you xml file in <beans><bean id="your id" class="org.example.className"></bean></beans>
 
 --------------------- Setter Injection -------------------
 
-1.
+1. Setters are used to set a value of the variable.
+
+2. in xml bean tag we can set inject our values using setter method of the property.
+
+3. we can alse set an reference type means class object for bean.
+
+4. <Property name=prop-name value || ref /> -- used to set value using setters injection.
+
+5. Loose coupling achieved using interface. which class implements interface that used based on the obj
+
+--------------------- AUTO WIRED -----------
+
+1. AUTO WIREING mean automatically inject the class ref in the xml. it can be acheived by name  or type.
+
+2. by name we use property name and id name as same , by type we use type of the object.
+
+3. autowire="name || type" --> automatically wired to that object. if more interface are found primary used
+
+
+------------------ CONSTRUCTOR INJECTION ---------------
+
+1. inject values using CONSTRUCTOR , we ned to create non-prsm,psrm CONSTRUCTOR.
+
+2. in xml <CONSTRUCTOR-arg index="param index" value || ref />
+
+3. here we can achieve auto wiring using autowire="CONSTRUCTOR" , it autowire to ref type.
+
+4.lambok is used for the basic annotation , like getter setter, it reedue the code and 
+  @Data annotation gives us the basic methods for an object like getter and setter.
+
+
+
+------------------------------ JAVA BASED SPRING CONFIG ----------
+
+1. use ClassPathXmlApplicaionContext instead of  AnnotationConfigApplicationConfig( config class name);
+
+2. create config class use @Configuration
+
+3. @Bean is used to create bean @Bean ClassName var { return new className(); }
+
+4. @Component --> used to manage all the class object to spring.
+
+5. @ComponentScans(package path) --> config in config class file.
+
+6. @Value() --> used to set an value. 

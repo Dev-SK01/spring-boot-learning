@@ -14,7 +14,7 @@
 
 7. Hybernate provides JPA for database connection
 
-8. Controller --> Entity Layer --> Repo --> DB
+8. Controller --> Entity Layer || Service Layer --> Repo --> DB
 
 ------------------------ DEPEDENCY INJECTION ---------------
 
@@ -25,8 +25,17 @@
    that is call Application Context
 
 3. there ara threee types of injection
-   1. Field injection --> 
-   2. constructor injection -->
-   3. Setter Injection -->
+   1. Field injection --> injecting values to objet properties
+   2. constructor injection --> injecting values using object constructor
+   3. Setter Injection --> injection values using object Setter funtion
+
+
+---------------------------- SCOPE OF THE OBJECT -----------
+
+1. Singleton --> when we create a same class object, if we set or chnage the prop value.
+   it will reflect on the another same class object.
+
+2. ProtoType -->  when we create a same class object, if we set or chnage the prop value.
+   it will doesnot reflect on the another same class object. creates new object container.
 
 

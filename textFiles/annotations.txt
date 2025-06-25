@@ -1,0 +1,35 @@
+--------------------------- SPRING BOOT ANNOTATIONS --------------------
+
+1. @Component --> used to tell to manage the object by SPRING boot.
+
+2. @Scope(single | proto) --> used to define the scope of the spring Component.
+
+3. @AutoWired --> used to inject the object.
+
+4. @Qualifier()  --> if more than one primary bean found to solve used Qualifier.
+
+5. @primary --> if more than one object found use as a primary object
+
+6. @Controller --> user to control an layout , mean expects files.
+
+7. @RestController --> used to tell that class is an controller class request.
+
+8. @RequestMapping("url path") --> for crete api end points
+
+9. @Service --> for define that class is service class.
+
+10. @Repository --> for define that class is repository class. communicates with database.
+
+11. @Entity --> to define the class to database table field.
+
+12. @Table(table-name) --> define table name.
+
+13. @Id --> to define tabe primary key prop.
+
+14. @Param type var -->to get the url params.
+
+15. Query(nativeQuery = true ,value = "SQL query") --> to define custom query method.
+
+16. @CorsOrigin(origins = "your origins") --> to enable ors for the controller.
+
+17. @RequestParam("name") type var --> to get the request url params.

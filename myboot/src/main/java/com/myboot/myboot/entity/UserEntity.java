@@ -1,6 +1,7 @@
 package com.myboot.myboot.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ForeignKey;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -14,6 +15,7 @@ public class UserEntity {
     private Long id;
     private String name;
     private int age;
+    
     public UserEntity(Long id, String name, int age) {
         this.id = id;
         this.name = name;

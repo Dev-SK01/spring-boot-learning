@@ -13,6 +13,7 @@
 6. import and define your REPOSITORY in controller.
 
 -------------------- Methods -----------------
+
 1. findAll() --> retrives all data form the database.
 
 2. save(entity data) --> insert data into database
@@ -30,3 +31,13 @@
 3. use @ResponseStatus in exception class
 
 4. use class on controller repo.orElseThrow(lamda function)
+
+------------------------- CUSTOM QUERY METHODS ------------
+
+1. here we can write our own methods. findByPropname(Type var) --> executes the query that finds properties
+
+2. Native Query --> run the databse query.
+
+3. JQL --> run the query based on object
+
+4. Query(nativeQuery = true ,value = "SQL query") --> to define custom query method.
