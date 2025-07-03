@@ -8,6 +8,8 @@ import com.myboot.myboot.exception.UserNotFoundException;
 import com.myboot.myboot.models.UserModel;
 import com.myboot.myboot.repository.UserRepository;
 
+import jakarta.servlet.http.HttpServletRequest;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,19 +31,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("api/user")
 public class UserController {
     
-    // @GetMapping
-    // public String getUsers(){
-    //     return "<h1 style='color:red;'> Hello User!</h1>";
-    // }
+    @GetMapping("simple")
+    public String getUsers(){
+        return "<h1 style='color:red;'> Hello User!</h1>";
+    }
     
-    // @GetMapping
-    // public List<UserModel> getUserDataList(){
-    //     return Arrays
-    //     .asList(
-    //         new UserModel(1L,"name",20),
-    //         new UserModel(2L, "name2", 10)
-    //     );
-    // }
+    @GetMapping("model")
+    public List<UserModel> getUserDataModel(){
+        return Arrays
+        .asList(
+            new UserModel(1L,"name",20),
+            new UserModel(2L, "name2", 10)
+        );
+    }
 
     // user repo for db operations
     @Autowired
@@ -51,6 +54,17 @@ public class UserController {
         return userRepo.findAll();
     }
 
+    // sesssion id route
+    @GetMapping("session")
+    public String getSessionId(HttpServletRequest request){
+        return request.getSession().getId();
+    }
+
+    // csrf token
+    @GetMapping("csrf")
+    public CsrfToken getCsrfToken( HttpServletRequest request){
+        return (CsrfToken) request.getAttribute("_csrf");
+    }
     // post data
     @PostMapping
     public UserEntity createUser(@RequestBody UserEntity user){

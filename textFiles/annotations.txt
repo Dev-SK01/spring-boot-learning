@@ -33,3 +33,7 @@
 16. @CorsOrigin(origins = "your origins") --> to enable ors for the controller.
 
 17. @RequestParam("name") type var --> to get the request url params.
+
+18. @Configuration --> define the configuration of the application, disable default filter chain
+
+19. @EnableWebSecurity --> for enabling custom filter chain

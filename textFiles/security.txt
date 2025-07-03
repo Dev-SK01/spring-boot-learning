@@ -1,0 +1,64 @@
+---------------------------------- SPRING BOOT SECURITY --------------
+
+1. Spting security package is used for  secure our application in spring BOOT
+
+2. Spring under the hood used servelets, each controller in spring is servelt.
+
+3. SpringFilterChain --> FrontController --> Controller
+
+4. Spring security add default SpringFilterChain for the requests.
+
+5. spring security maintains session for user logged in. HttpServletRequest.getSession.getId() --> session getId
+
+6. we can set name and pass in application.properties spring.security.user.name
+
+7. Spring security provides default form for authendication for our application
+
+8. spring default in-memory user details to authendicate, UserDetailsService,UserDetail,InMemoryUserDetailsManager are used.
+
+------------------------ CSRF (cross site request forgery) TOKEN ----------------
+
+1. Attaker steal user session token , to protect csrf token genereated.
+
+2. when authendicate used use POST,PUT ,DELETE needs csrf token to verify the request.
+
+3. In spring by default CSRF filter chain is applied.
+
+4. request.getAttribute("_csrf") --> to get the csrf token forthe session
+
+5. needs to passin header X-CSRF-TOKEN
+
+-------------------------- CUSTOMIZATION OF FILTER CHAIN ---------
+
+1. use @Configuration and @EnableWebSecurity annotation for the custom filterchain.
+
+2. @Bean annotaion for the 
+
+function SecurityFilterChain variable (HttpSecurity http) throws Exception {
+    http.csrf( Customizer -> Customizer.disable) // disables csrf
+    http.authorizeRequest( request -> requestanRequest.authendicated) // every request should be authendicate
+    http.formLogin(Customizer.WithDefaults) // enables default auth form 
+        return http.build
+}
+
+------------------------------- AUTHENDICATION ------------------
+
+1. To auth requests in java authentication provider. make the request object as authenticated.
+
+2. AuthendicationProvider , for db DaoAuthendicationProvider is used.
+
+3. we need to pass UserDetailsService ref. create class for the  interface and implement method
+
+4. connect repo for your auth service.  
+
+------------------------- BCRYPT ENCODER -----------
+
+1. ENcryption ,Decription --> cipher text we can get the plain text.
+
+2. IN hasing we cannot ge the actual text only hashed text.
+
+3. In BCRYPT we add salt so fi we hash the same value the hased word will differ.
+
+4. $version $rounds $salt $hased word.
+
+5. BCryptPasswordEncoder(strength:rounds)
